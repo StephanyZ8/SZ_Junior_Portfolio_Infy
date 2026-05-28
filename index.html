@@ -1,228 +1,177 @@
-/* =========================
-   GENERAL
-========================= */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-  margin: 0;
-  padding-top: 80px; /* adjust if navbar is taller */
-  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
-  background: linear-gradient(to bottom, #ffe4ee, #fff7fb);
-  color: #6d5a63;
-}
-html {
-  scroll-behavior: smooth;
-}
+  <!-- Update these (from Curator Guide) -->
+  <meta name="description" content="Junior Fall Portfolio for YOUR NAME" />
+  <meta name="keywords" content="portfolio, junior, projects, programming, web development" />
+  <meta name="author" content="YOUR NAME" />
 
-#home,
-#projects,
-#contacts {
-  scroll-margin-top: 125px; /* adjust if navbar height changes */
-}
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-  background-color: #f8c8dc;
-  padding: 1em 2em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgb(245, 36, 158,0.08);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
+  <title>YOUR NAME | Junior Fall Portfolio</title>
 
-.navbar-left img {
-  height: 35px;
-}
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 
-.navbar-right {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-  margin: 0;
-  padding: 0;
-}
+  <!-- Optional favicon (put your icon file in the same folder) -->
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
 
-.navbar-right a {
-  text-decoration: none;
-  color: #6d4c5b;
-  font-weight: bold;
-}
+  <!-- Optional fonts (only keep if your CSS uses them) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
 
-.navbar-right a:hover {
-  color: #ff69b4;
-}
+<body id="home">
 
-/* =========================
-   CARDS
-========================= */
-.resource-card {
-  background-color: #fff5fa;
-  margin: 2em auto;
-  padding: 1.5em;
-  max-width: 1100px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
-}
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <!-- Replace logo.png with your own image file -->
+        <img src="taehs.png" alt="Logo" />
+      </div>
 
-/* =========================
-   BIO
-========================= */
-.bio {
-  text-align: center;
-}
+      <ul class="navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://stephanyz8.github.io/SZ_Junior_Fall_Portfolio/cfus.html">CFUs</a></li>
+        <li><a href="https://stephanyz8.github.io/SZ_Junior_Fall_Portfolio/index.html#entries">Entries</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
-.bio-pic img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #f7a8c3;
-  object-fit: cover;
-}
+  <!-- MAIN CONTENT -->
+  <main class="home-card">
 
-.bio-text h1 {
-  color: #d96c9d;
-}
+    <!-- ABOUT / BIO CARD -->
+    <section class="resource-card">
+      <div class="bio">
+        <div class="bio-pic">
+          <!-- Replace profile.jpg with your own image file -->
+          <img src="stephany.png" alt="Stephany's Photo" />
+        </div>
 
-.bio-text h4 {
-  color: #b57aa1;
-  font-weight: normal;
-}
+        <div class="bio-text">
+          <h1>Stephany Zaraza</h1>
+          <h4>Student at Thomas A. Edison CTE High School</h4>
+          <p>
+            An aspiring junior in the Programming and Prototyping program, looking to delve more into the innerworkings of coding languages such as HTML/CSS, javascript, python, etc.
+          </p>
+        </div>
+      </div>
+    </section>
 
-/* =========================
-   PROJECTS
-========================= */
-.featured-header {
-  text-align: center;
-  background: #fff5fa;
-}
+<div class="skill-images" id="contacts">
 
-.featured-header h2 {
-  font-size: 2rem;
-  color: #d96c9d;
-  margin-bottom: 0.4em;
-}
+  <!-- Old Portfolio -->
+  <a href="https://stephanyz8.github.io/SZ_Junior_Fall_Portfolio/" target="_blank" class="link-item">
 
-.featured-header p {
-  color: #8b6b7b;
-  font-size: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-.project {
-  display: flex;
-  gap: 1.5em;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
+    <img class="link-pic" src="icon1.jpg" alt="Old Portfolio" />
 
-.project iframe {
-  flex: 2;
-  min-width: 300px;
-  height: 420px;
-  border: none;
-  border-radius: 12px;
-}
+    <span>Old Portfolio</span>
 
-.reflection {
-  flex: 1;
-  background: #ffe5ef;
-  padding: 1.2em;
-  border-radius: 12px;
-}
+  </a>
 
-.reflection h3 {
-  color: #d96c9d;
-  margin-top: 0;
-}
+  <!-- Email -->
+  <a href="mailto:zast0325@gmail.com" class="link-item">
 
-.project-desc {
-  line-height: 1.5;
-  margin-bottom: 1em;
-  color: #6d5a63;
-}
+    <img class="link-pic" src="icon2.png" alt="Email" />
 
-.skills {
-  font-size: 0.95em;
-  color: #8b6b7b;
-}
-/* =========================
-   LINKS
-========================= */
-.skill-images {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  margin-top: 1em;
-}
+    <span>Email Me</span>
 
-.link-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  border: 2px solid #ffc1d6;
-  object-fit: cover;
-  transition: transform 0.2s;
-}
+  </a>
 
-.link-pic:hover {
-  transform: scale(1.08);
-}
-.link-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/stephany-zaraza-a57a54369"
+     target="_blank"
+     class="link-item">
 
-  text-decoration: none;
-  color: #6d4c5b;
+    <img class="link-pic" src="icon3.png" alt="LinkedIn" />
 
-  background-color: #fff0f5;
-  padding: 12px 18px;
-  border-radius: 12px;
+    <span>LinkedIn</span>
 
-  transition: 0.3s ease;
-}
+  </a>
 
-.link-item:hover {
-  background-color: #ffd6e7;
-  transform: translateY(-3px);
-}
+</div>
+    </section>
 
-.link-item span {
-  font-weight: bold;
-  font-size: 1rem;
-}
-/* =========================
-   FOOTER
-========================= */
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #a67c91;
-}
+<!-- FEATURED PROJECTS -->
+<section class="resource-card featured-header" id="projects">
 
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1em;
-  }
+  <h2>✧ Featured Projects ✧</h2>
 
-  .project {
-    flex-direction: column;
-  }
+  <p>
+    A collection of projects showcasing my growth in
+    web development, creativity, and programming skills.
+  </p>
 
-  .project iframe {
-    width: 100%;
-  }
-}
+</section>
+    <!-- PROJECT 1 -->
+    <section class="resource-card">
+    
+      <div class="project">
+    
+        <iframe src="https://py3.codeskulptor.org/?authuser=2#user311_ThbmzhBkPa7GZTF.py" title="Holiday Drawing"></iframe>
+    
+        <div class="reflection">
+    
+          <h3>Holiday Drawing</h3>
+    
+          <p class="project-desc">
+            I created a festive Christmas scene using Python and SimpleGUI. I built elements like a tree, Santa, animated lights, and a holiday banner. I used loops and lists to repeat shapes and animate the lights, which made the scene more dynamic. This project helped me understand coordinates and how to build structured drawings using code.
+          </p>
+    
+          <p class="skills">
+            <strong>Skills:</strong> Python, SimpleGUI, Loops, Lists, Coordinate Systems
+          </p>
+    
+        </div>
+    
+      </div>
+    
+    </section>
+
+    <!-- PROJECT 2 -->
+    <section class="resource-card">
+    
+      <div class="project">
+    
+        <iframe src="https://py3.codeskulptor.org/#user310_yJBsvoxoumqh4bE.py" title="Arcade"></iframe>
+    
+        <div class="reflection">
+    
+          <h3>Arcade</h3>
+    
+          <p class="project-desc">
+            This project was focused on building multiple mini-games using Python. I used conditionals to control game logic and make the program respond to user input. I also added text and color to improve the visual experience. Through trial and error, I learned how to debug and structure interactive programs.
+          </p>
+    
+          <p class="skills">
+            <strong>Skills:</strong> Python, Conditionals, If/Else Statements, Loops, User Input
+          </p>
+    
+        </div>
+    
+      </div>
+    
+    </section>
+
+    <!-- Add more projects by copying PROJECT blocks -->
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="resource-card">
+    <p>© <span id="year"></span> Stephany Zaraza | Junior Fall Portfolio</p>
+  </footer>
+
+  <script>
+    // Auto-updates the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
